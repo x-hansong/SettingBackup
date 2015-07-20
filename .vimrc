@@ -66,8 +66,8 @@ set viminfo+=!
 set iskeyword+=_,$,@,%,#,-
 "修改leader键为逗号
 let mapleader=","
-imap jj <esc>
-
+"markdown配置
+au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}   set filetype=markdown
 "------------------------------------------------------------------
 
 "vundle setting
@@ -82,6 +82,8 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+
+Plugin 'ekalinin/Dockerfile.vim'
 
 Plugin 'scrooloose/nerdcommenter'
     ",ca，在可选的注释方式之间切换，比如C/C++ 的块注释/* */和行注释//
@@ -113,7 +115,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
     " Trigger configuration. Do not use <tab> if you use
     " https://github.com/Valloric/YouCompleteMe.
-    let g:UltiSnipsExpandTrigger="ii"
+    let g:UltiSnipsExpandTrigger="<Tab>"
     let g:UltiSnipsJumpForwardTrigger="II"
     let g:UltiSnipsJumpBackwardTrigger="OO"
     

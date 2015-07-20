@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/yonah/.oh-my-zsh
+export ZSH=/home/ibm/.oh-my-zsh
+
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -45,7 +46,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git autojump tmux sudo)
 
 # User configuration
 
@@ -79,10 +80,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-#autojump setting
-[[ -s /home/yonah/.autojump/etc/profile.d/autojump.sh  ]] && source /home/yonah/.autojump/etc/profile.d/autojump.sh
-
-autoload -U compinit && compinit -u
 
 #rdesktop
 alias rdp='rdesktop -a 16 -g 1366x728 -r sound:local -5'
@@ -121,3 +118,8 @@ check-cmd-self-insert() { zle .self-insert && recolor-cmd }
  
  zle -N self-insert check-cmd-self-insert
  zle -N backward-delete-char check-cmd-backward-delete-char
+
+
+export NDK_HOME=/home/ibm/Android/android-ndk-r9
+export PATH=$NDK_HOME:$PATH
+
