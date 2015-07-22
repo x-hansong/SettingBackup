@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/ibm/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 
 # Set name of the theme to load.
@@ -120,6 +120,9 @@ check-cmd-self-insert() { zle .self-insert && recolor-cmd }
  zle -N backward-delete-char check-cmd-backward-delete-char
 
 
-export NDK_HOME=/home/ibm/Android/android-ndk-r9
+export NDK_HOME=~/Android/android-ndk-r9
 export PATH=$NDK_HOME:$PATH
+
+# 10ms for key sequences
+KEYTIMEOUT=1
 

@@ -68,6 +68,7 @@ set iskeyword+=_,$,@,%,#,-
 let mapleader=","
 "markdown配置
 au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}   set filetype=markdown
+"ctrl+s保存
 "------------------------------------------------------------------
 
 "vundle setting
@@ -132,6 +133,8 @@ Plugin 'taglist.vim'
     nmap tl :Tlist<cr>  
     "不同时显示多个文件的tag，只显示当前文件的
     let Tlist_Show_One_File=1
+
+Plugin 'vim-scripts/fcitx.vim'
 
 " plugin on GitHub repo
 "Plugin 'tpope/vim-fugitive'
@@ -234,6 +237,8 @@ set scrolloff=3
 
 " 通过使用: commands命令，告诉我们文件的哪一行被改变过
 set report=0
+"减少映射延迟
+set timeoutlen=1000 ttimeoutlen=0
 
 
 
