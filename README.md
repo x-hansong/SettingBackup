@@ -1,7 +1,4 @@
 # SettingBackup
-备份常用配置文件
+备份常用配置文件以及自己写的 shell 脚本.
 
-# .vimrc
-需要先安装[vbundle](https://github.com/gmarik/Vundle.vim),详细安装方法查看其指导.
-装完之后,进入vim, 执行`BundleInstall`安装插件即可
-
+使用`link_files.sh`可以把当前的配置文件软链接到主目录下.

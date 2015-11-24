@@ -1,0 +1,2 @@
+"支持fcitx在vim下自动切换中英文
+Plugin 'vim-scripts/fcitx.vim'

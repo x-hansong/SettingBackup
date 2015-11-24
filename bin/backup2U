@@ -1,0 +1,12 @@
+#!/bin/bash
+# File Name: backup.sh
+# Author: x-hansong
+# Mail: x.hansong.scut@gmail.com
+# Created Time: 2015-08-18
+# Function: backup files
+# Usage:
+VIMCONFIG="$HOME/.vimrc.local $HOME/.vimrc.bundles.local $HOME/.vimrc.before.local"
+FILES="$HOME/.zshrc $HOME/.tmux.conf $HOME/.gdbinit $HOME/.gitconfig"
+DIRS="$HOME/Documents $HOME/Crystal $HOME/bin $HOME/.vim/snippets"
+
+rsync -PrltDv  --delete $FILES $DIRS $VIMCONFIG /media/`whoami`/UUI/Backup

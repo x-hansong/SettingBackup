@@ -1,0 +1,12 @@
+#!/bin/bash
+# File Name: setingbackup.sh
+# Author: x-hansong
+# Mail: x.hansong.scut@gmail.com
+# Created Time: 2015-07-25
+# Function: copy some backup file to ~/SettingBackup/
+
+VIMCONFIG="$HOME/.vimrc.local $HOME/.vimrc.bundles.local $HOME/.vimrc.before.local"
+FILES="$HOME/.zshrc $HOME/.tmux.conf $HOME/.gdbinit $HOME/.gitconfig"
+DIRS="$HOME/bin $HOME/snippets"
+
+rsync -PrltDv  --delete $FILES $DIRS $VIMCONFIG ~/SettingBackup/

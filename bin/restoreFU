@@ -1,0 +1,9 @@
+#!/bin/bash
+# File Name: restore.sh
+# Author: x-hansong
+# Mail: x.hansong.scut@gmail.com
+# Created Time: 2015-08-19
+# Function: restore files
+# Usage: 
+
+rsync -PrltDv /media/`whoami`/UUI/Backup/ ~/

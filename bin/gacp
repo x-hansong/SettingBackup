@@ -1,0 +1,23 @@
+#!/bin/bash
+# File Name: gacp
+# Author: x-hansong
+# Mail: x.hansong.scut@gmail.com
+# Created Time: 2015-07-25
+# Function: a sequence of add, commit and push operation, push to current branch
+# Usage:    gacp [commit information]
+if [ -n "$1"  ]
+then
+    msg=$1
+else
+    msg="update at `date '+%F %T'`"
+fi
+function git_branch {
+  branch="`git branch 2>/dev/null | grep "^\*" | sed -e "s/^\*\ //"`"
+  if [ "${branch}" == "" ];then
+      echo there is no git repository
+      exit 1
+  fi
+     echo "$branch"
+}
+git add . && git commit -am "$msg" && git push origin $(git_branch)
+

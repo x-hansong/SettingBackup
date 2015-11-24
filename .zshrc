@@ -46,7 +46,10 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump tmux sudo)
+
+export ZSH_TMUX_AUTOSTARTi_ONCE=true
+
+plugins=(git autojump tmux colored-man)
 
 # User configuration
 
@@ -80,9 +83,28 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-
+alias rm='rm -i'
+#apt-get alias
+alias install='sudo apt-get install '
+alias remove='sudo apt-get remove '
+alias autoremove='sudo apt-get autoremove '
+alias autoclean='sudo apt-get autoclean '
+#ssh alias
+alias ssh-lab="ssh root@110.64.66.198 && echo 'login 110.64.66.198 success'"
+alias ssh-ali="ssh root@114.215.210.157 && echo 'login 110.64.66.198 success'"
 #rdesktop
 alias rdp='rdesktop -a 16 -g 1366x728 -r sound:local -5'
+#vnc
+alias vncxp='vncviewer 110.64.66.198:5'
+#apt-get alias 
+alias acs='apt-cache search'
+alias agu='sudo apt-get update'
+alias agg='sudo apt-get upgrade'
+alias agd='sudo apt-get dist-upgrade'
+alias agi='sudo apt-get install'
+alias agr='sudo apt-get remove'
+
+
 
 #漂亮又实用的命令高亮界面
 setopt extended_glob
@@ -122,7 +144,12 @@ check-cmd-self-insert() { zle .self-insert && recolor-cmd }
 
 export NDK_HOME=~/Android/android-ndk-r9
 export PATH=$NDK_HOME:$PATH
+export PATH=~/bin:$PATH
 
 # 10ms for key sequences
 KEYTIMEOUT=1
+#use vi-mode
+bindkey -v
 
+export TERM=xterm-256color
+[ -n "$TMUX" ] && export TERM=screen-256color

@@ -1,0 +1,10 @@
+#!/bin/bash
+# File Name: sed_sitemap.sh
+# Author: x-hansong
+# Mail: x.hansong.scut@gmail.com
+# Created Time: 2015-08-24
+# Function: 
+# Usage: 
+
+sed -i 's/https:\/\/github.com\/x-hansong/http:\/\/x-hansong.github.io/g' $1
+

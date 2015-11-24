@@ -1,0 +1,9 @@
+#!/bin/bash
+# File Name: hexo-server.sh
+# Author: x-hansong
+# Mail: x.hansong.scut@gmail.com
+# Created Time: 2015-08-10
+# Function: a batch operation for hexo, which perform cleaning, generating, opening server.
+# Usage: 
+
+hexo clean && hexo g --draft &&  hexo server --draft

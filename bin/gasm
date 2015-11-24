@@ -1,0 +1,9 @@
+# File Name: /home/ibm/bin/gasm.sh
+# Author: x-hansong
+# Mail: x.hansong.scut@gmail.com
+# Created Time: 2015-09-11
+# Function: compile the 32bits assembly source in the 64bits system
+# Usage: gasm source
+DEST=${1%.*}
+
+gcc -m32 -gstabs -nostdlib  -o $DEST  $1 -L/lib -lc
