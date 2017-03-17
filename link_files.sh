@@ -7,7 +7,7 @@
 
 CWD=`pwd`
 
-FILES=`ls -A --ignore='.git' --ignore='README.md' --ignore='link_files.sh'`
+FILES=`ls -A --ignore='.git' --ignore='README.md' --ignore='link_files.sh' --ignore='idea'`
 
 for FILE in $FILES;
 do
